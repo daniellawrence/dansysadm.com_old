@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daniel Lawrence | dansysadm </title>
+  <link rel="stylesheet" type="text/css" href="/static/css/master.css" />
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <header>
+    <div class="main-col">
+      <h1><a href="/">daniel <strong>lawrence</strong></a></h1>
+      <nav>
+        <ul id="navigation">
+          <li><a href="/blog/">blog</a></li>
+          <li><a href="/contact/">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="clearfix"></div>
+  </header>
+
+  <div id="content" class="main-col">
+<!-- end of the header -->
