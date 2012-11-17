@@ -1,5 +1,5 @@
 # The path to the directory that contains all the source files that are
-# used to create the webiste.
+# used to create the website.
 # This includes markdown files and css files.
 input_dir = "src"
 
@@ -8,10 +8,10 @@ input_dir = "src"
 # servers.
 output_dir = "web"
 
-# Where the header file is, the header file should be html that is insesrted
+# Where the header file is, the header file should be html that is inserted
 # before every generated page.
 header_file = "theme/header"
 
-# Where the footer file is, the footer file should be html that is insesrted
+# Where the footer file is, the footer file should be html that is inserted
 # after every generated page.
 footer_file = "theme/footer"

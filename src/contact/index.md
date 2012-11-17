@@ -1,8 +1,8 @@
 # about
 
-I am a UNIX and Linux Systems administratorm, linux enthusiast and Python Programmer.
+I am a UNIX and Linux Systems administrator, Linux enthusiast and Python Programmer.
 
-I specialising with automation of Sun/Oracle Solaris and Redhat Linux tasks.
+I specializing with automation of Sun/Oracle Solaris and Red hat Linux tasks.
 
 I am currently working on at Toll Group.
 
