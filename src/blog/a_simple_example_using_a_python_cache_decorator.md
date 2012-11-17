@@ -1,14 +1,15 @@
 # A simple example using a python cache decorator
 
-Using the classic Fibonacci equation we can show the differences an benefits of using a python decorator as a caching engine for functions.
+Using the classic Fibonacci equation we can show the differences and benefits of using a python decorator as a caching engine for functions.
 
 Taking the below code to work out the 10th Fibonacci number, however I had added a sleep of one second every-time the Fibonacci function is called.
 
 ```python
 #!/usr/bin/env python
+from time import sleep
+
 def fibonacci(n):
    "Return the nth fibonacci number."
-   from time import sleep
    sleep(1)
    if n in (0, 1):
       return n
@@ -49,6 +50,8 @@ All you need to do to cache the answers of the function is to add @memorize deco
 
 ```python
 #!/usr/bin/env python
+from time import sleep
+
 def memorize(function):
   memo = {}
   def wrapper(*args):
@@ -64,7 +67,6 @@ def memorize(function):
 @memorize
 def fibonacci(n):
    "Return the nth fibonacci number."
-   from time import sleep
    sleep(1)
    if n in (0, 1):
       return n

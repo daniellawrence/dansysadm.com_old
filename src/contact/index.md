@@ -22,19 +22,19 @@ Send me and email requesting my CV and i will be able to provide you with the mo
 
 __Linkedin (Me)__
 
-You can view my Linkedin Profile
+You can view my Linkedin Profile <http://au.linkedin.com/in/dannylawrence>
 
 __Twitter__
 
-You can view my Twitter feed
+You can view my Twitter <http://twitter/dansysadm>
 
 __GitHub__
 
-You can view my github.com account
+You can view my github <https://github.com/daniellawrence>
 
 __Launchpad__
 
-Launchpad code, bug reports, bugfiles: https://launchpad.net/~dannyla
+Launchpad code, bug reports, bugfiles: <https://launchpad.net/~dannyla>
 
 __Tumblr__
 
@@ -42,8 +42,8 @@ http://danielscottlawrence.tumblr.com/
 
 __Google Play__
 
-Android applications i have made: https://play.google.com/store/apps/developer?id=daniel+lawrence
+Android applications i have made: <https://play.google.com/store/apps/developer?id=daniel+lawrence>
 
 __Coderwall__
 
-http://coderwall.com/daniellawrence
+<http://coderwall.com/daniellawrence>
