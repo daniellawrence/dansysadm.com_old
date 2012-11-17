@@ -11,15 +11,17 @@ import markdown2
 import shutil
 import settings
 
-def generate_page(page_name, header_html, footer_html, root):
+def generate_page(page_file, header_html, footer_html, root):
     """
     Take a markdown page name, a header, a footer and its location and
     turn it into a full html page, ready to be uploaded to a remote system.
     """
+    # Remove the .md file extension from the page_file into the page_name
+    page_name = page_file.replace('.md','')
 
     output_dir = settings.output_dir
     # generate the path to the page based on the root and page_name
-    page_path = '%(root)s/%(page_name)s' % locals()
+    page_path = '%(root)s/%(page_file)s' % locals()
 
     # Generate the directory where the complied html will end up 
     dir_target = '%(output_dir)s/%(root)s' % locals()
@@ -65,10 +67,8 @@ def main():
     shutil.copytree('%(input_dir)s/static' % locals() ,'%(output_dir)s/static' % locals())
 
     for (root, dir_name, files ) in os.walk(input_dir):
-        if 'static' in root:
-            continue 
         for src_file in files:
-            if src_file == 'favicon.ico':
+            if not src_file.endswith('.md'):
                 continue
             generate_page( src_file, header_html, footer_html, root )
         
