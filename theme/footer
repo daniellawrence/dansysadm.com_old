@@ -1,4 +1,7 @@
 <!-- Start of the footer from the theme -->
+
+<!-- This is the code that will pull in the disque comment management into the current page.
+Allowing readers to comment without having to run any server side code or databases. -->
         <div id="disqus_thread"></div>
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -11,10 +14,7 @@
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
         </script>
-<!--
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
--->
+<!-- added for the google tracking so that i know if anyone has looked at the pages or not -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
