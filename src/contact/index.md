@@ -38,7 +38,7 @@ Launchpad code, bug reports, bugfiles: <https://launchpad.net/~dannyla>
 
 __Tumblr__
 
-http://danielscottlawrence.tumblr.com/
+My outdated Tumblr account: <http://danielscottlawrence.tumblr.com/>
 
 __Google Play__
 
