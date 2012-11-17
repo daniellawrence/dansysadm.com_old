@@ -1,9 +1,18 @@
-# welcome
 
-This is my new site that is all written in markdown, then using python it generates HTML!
-
-I am a UNIX and Linux Systems enthusiast specializing with
-automation of Sun/Oracle Solaris and Red hat Linux administration.
-
-I'm passionate about what I do, using the latest technologies and
-techniques to deliver the very best solution that I can be proud of.
+```python
+>>> class ArchType(object):
+>>>   def __init__(self,name):
+>>>     self.name = name
+>>>     self.hitpoints = 100
+>>>  def __str__(self):
+>>>     return "Hello, my name is %s and I am a %s." %  \
+...     ( self.name, self.__class__.__name__ )
+...
+>>> class LinuxGeek(ArchType):
+>>>   pass
+...
+>>>  dan = LinuxGeek('dan')
+>>>  print dan
+'Hello, my name is dan and I am a LinuxGeek.
+>>>
+```

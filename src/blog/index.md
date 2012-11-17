@@ -20,3 +20,14 @@ A step by step guide for install zfs on your Ubuntu server and creating your fir
 Mine just happened to be 4x3TB disks running in a HP n40l micro-server.
 
 
+### [Using Hostinfo to generate nagios configuration files](using_hostinfo_to_generate_nagios_configuration.html)
+*First published on 2 February, 2012*
+
+One of the best thing ( and worst thing...) is that it uses a plain text files for its configurations. 
+This dose allow you to easily generate the configuration for 1000's of servers without touching a configuration file.
+
+### [Making python faster with a cache decorator ](a_simple_example_using_a_python_cache_decorator.html)
+*First published on 1 February, 2012*
+
+Using a simple python decorator to speed up 10th Fibonacci number generation from 3 minutes to 11 seconds.
+All you need to do is add __@memorize__

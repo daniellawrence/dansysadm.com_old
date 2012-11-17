@@ -1,9 +1,19 @@
 dansysadm.com
 =============
 
-Website for dansysadm.com
+Website for <http://dansysadm.com>
 
 The website uses markdown and some css to build the HTML pages.
+
+
+Features
+--------
+- Uses markdown2 to turn the markdown into HTML
+- Separate Header and Footer pages allow for easy theme changes
+- pygments used for code highlighting.
+
+Layout
+------
 
 - __src__ contains markdown and css files that are generated into HTML
 - __theme__ contains the header and footer files that are already HTML
@@ -11,3 +21,11 @@ The website uses markdown and some css to build the HTML pages.
 - __settings__ contains settings like where the src files are and where are the going
 - __deploy_local.sh__ A horrible hack to generate the pages and restart nginx
 - __deploy_remote.sh__ A horrible hack to generate the pages, ship them to my web server and restart nginx
+
+
+TODO
+-----
+
+- Replace deploy_local.sh and deploy_remote.sh with a fabric script
+- Add Tags or Topics to blog posts.
+- Work out a way to support lots of blog posts ( re-work /src/blog/index.md )

@@ -9,7 +9,9 @@
 <body>
   <header>
     <div class="main-col">
-      <h1><a href="/">daniel <strong>lawrence</strong></a></h1>
+      <h1>
+         <a href="/">daniel <strong>lawrence</strong></a>
+      </h1>
       <nav>
         <ul id="navigation">
           <li><a href="/blog/">blog</a></li>
