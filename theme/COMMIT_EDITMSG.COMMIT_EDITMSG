@@ -1,0 +1,26 @@
+added a few comments
+
+# --------------
+# Please enter the commit message for your changes. Everything below
+# this paragraph is ignored, and an empty message aborts the commit.
+# Just close the window to accept your message.
+diff --git a/src/index.md b/src/index.md
+index 921cf84..858bbc5 100644
+--- a/src/index.md
++++ b/src/index.md
+@@ -1,10 +1,9 @@
+ # welcome
+ 
+-This is my new site that is all written in markdown, then using python it generates html!
++This is my new site that is all written in markdown, then using python it generates HTML!
+ 
+-I am a UNIX and Linux Systems enthusiast specialising with
+-automation of Sun/Oracle Solaris and Redhat Linux administration.
++I am a UNIX and Linux Systems enthusiast specializing with
++automation of Sun/Oracle Solaris and Red hat Linux administration.
+ 
+ I'm passionate about what I do, using the latest technologies and
+-techniques to deliver the very best solution that I can be proud of.
+-
++techniques to deliver the very best solution that I can be proud of.
+\ No newline at end of file

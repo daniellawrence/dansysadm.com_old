@@ -19,7 +19,6 @@ Allowing readers to comment without having to run any server side code or databa
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-36354656-1']);
-  _gaq.push(['_setDomainName', 'dansysadmin.com']);
   _gaq.push(['_trackPageview']);
 
   (function() {
