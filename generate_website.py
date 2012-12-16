@@ -10,6 +10,7 @@ import os
 import markdown2
 import shutil
 import settings
+import re
 
 def generate_page(page_file, header_html, footer_html, root):
     """
@@ -29,7 +30,7 @@ def generate_page(page_file, header_html, footer_html, root):
 
     # Generate the location where the complied html will end up 
     page_target = '%(dir_target)s/%(page_name)s.html' % locals()
-    print "%(page_path)s -> %(page_target)s" % locals()
+    #print "%(page_path)s -> %(page_target)s" % locals()
 
     # Make sure the output directory is on the system
     if not os.path.exists( dir_target ):
@@ -40,13 +41,28 @@ def generate_page(page_file, header_html, footer_html, root):
     # Create a markdown2 object
     markdowner = markdown2.Markdown(extras=["fenced-code-blocks", \
         "fenced_code", "pyshell"])
-    # Convert the markdown into html
+
+    # Convert the markdown into html 
     page_html = markdowner.convert( page_markdown )
+
+    # take the header and footer and minify the html size. This will not save
+    # very much space nor increase the speed by very much.
+    # However it will not make it take longer either ;)
+    header_html_min = re.sub('>\W+<','><', header_html)
+    footer_html_min = re.sub('>\W+<','><', footer_html)
+
+    # Take all the html sources and create the full_page_html
+    full_page_html = header_html_min + page_html + footer_html_min
 
     # Write the file into the target area.
     f = open( page_target , 'w')
-    f.write( header_html  + page_html + footer_html )
+    f.write( full_page_html )
     f.close()
+
+    page_size = len( full_page_html )
+
+    # print some stats
+    print "%(page_file)s generated %(page_size)d bytes" % locals()
 
 def main():
     """

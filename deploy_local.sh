@@ -20,4 +20,5 @@ rm -rf "web"
 ./generate_website.py
 
 # Update the site
-rsync -azv web/* 192.168.122.54:/var/tmp/dansysadm/
+rsync -azv web/* 192.168.122.54:/var/www/dansysadm/
+ssh 192.168.122.54 chmod -R 705 /var/www/dansysadm/

@@ -3,9 +3,6 @@
 <head>
   <title>Daniel Lawrence | dansysadm </title>
   <link rel="stylesheet" type="text/css" href="/static/css/master.css" />
-  <link rel="stylesheet" type="text/css" href="/static/css/reset.css" />
-  <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
-  <link rel="stylesheet" type="text/css" href="/static/css/pygments.css" />
   <meta charset="utf-8">
 </head>
 

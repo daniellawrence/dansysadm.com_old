@@ -12,8 +12,11 @@
 # DO NOT USE THIS
 #------------------------------------------------------------------------------
 
-./deploy_local.sh
+# Delete the old deployment
+rm -rf "web"
 
+# create a new static site
+./generate_website.py
 # Delete the old deployment
 #ssh dansysadm.com 'rm -rf "/var/tmp/web/*"'
 
