@@ -17,8 +17,6 @@ rm -rf "web"
 
 # create a new static site
 ./generate_website.py
-# Delete the old deployment
-#ssh dansysadm.com 'rm -rf "/var/tmp/web/*"'
 
 # Update the site
 rsync -azv web/* dansysadm.com:/var/tmp/dansysadm/
