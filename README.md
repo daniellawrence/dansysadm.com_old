@@ -1,7 +1,7 @@
 dansysadm.com
 =============
 
-Website for <http://dansysadm.com>
+Website for <http://dansysadm.com> , See it in action
 
 The website uses markdown and some css to build the HTML pages.
 
@@ -12,7 +12,20 @@ Features
 - Separate Header and Footer pages allow for easy theme changes
 - pygments used for code highlighting.
 
-Layout
+Installing
+-----------
+
+- Pull down the code
+- Install the requirements
+- Generate the website
+- Start the SimpleHTTPServer
+
+    $ git clone git@github.com:daniellawrence/dansysadm.com.git
+    $ pip install -r requirements.txt
+    $ python generate_website.py
+    $ cd web
+    $ python -m SimpleHTTPServer
+
 ------
 
 - __src__ contains markdown and css files that are generated into HTML
