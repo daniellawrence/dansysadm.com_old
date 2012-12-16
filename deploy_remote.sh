@@ -15,7 +15,7 @@
 ./deploy_local.sh
 
 # Delete the old deployment
-ssh dansysadm.com 'rm -rf "/var/tmp/web/*"'
+#ssh dansysadm.com 'rm -rf "/var/tmp/web/*"'
 
 # Update the site
-scp -r web/* dansysadm.com:/var/tmp/dansysadm/
+rsync -azv web/* dansysadm.com:/var/tmp/dansysadm/

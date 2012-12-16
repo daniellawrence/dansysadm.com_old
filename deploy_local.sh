@@ -14,10 +14,10 @@
 #------------------------------------------------------------------------------
 
 # Delete the old deployment
-sudo rm -rf "/var/tmp/web/*" "web"
+rm -rf "web"
 
 # create a new static site
 ./generate_website.py
 
 # Update the site
-cp -r web/* /var/tmp/web/
+rsync -azv web/* 192.168.122.54:/var/tmp/dansysadm/

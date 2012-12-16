@@ -45,7 +45,8 @@ def generate_page(page_file, header_html, footer_html, root):
     # Read in the source page ( as markdown )
     page_markdown = open( page_path ).read()
     # Create a markdown2 object
-    markdowner = markdown2.Markdown(extras=["fenced-code-blocks","fenced_code", "pyshell"])
+    markdowner = markdown2.Markdown(extras=["fenced-code-blocks", \
+        "fenced_code", "pyshell"])
     # Convert the markdown into html
     page_html = markdowner.convert( page_markdown )
     # Write the file into the target area.
