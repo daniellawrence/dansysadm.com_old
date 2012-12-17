@@ -16,3 +16,9 @@
 'Hello, my name is dan and I am a LinuxGeek.
 >>>
 ```
+
+
+Recent website changes
+----------------------
+
+You can have a look at all the recent changes to this website at [github.com/daniellawrence/dansysadm.com](https://github.com/daniellawrence/dansysadm.com/commits/master)

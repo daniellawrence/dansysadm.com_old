@@ -1,5 +1,8 @@
 <!-- Start of the footer from the theme -->
 
+<h2>Your thoughts?</h2>
+<p>If you have any feedback, please let me know!</p>
+
 <!-- This is the code that will pull in the disque comment management into the current page.
 Allowing readers to comment without having to run any server side code or databases. -->
         <div id="disqus_thread"></div>
