@@ -20,12 +20,13 @@ Installing
 - Generate the website
 - Start the SimpleHTTPServer
 
-      $ git clone git@github.com:daniellawrence/dansysadm.com.git
-      $ pip install -r requirements.txt
-      $ python generate_website.py
-      $ cd web
-      $ python -m SimpleHTTPServer
-
+```sh
+$ git clone git@github.com:daniellawrence/dansysadm.com.git
+$ pip install -r requirements.txt
+$ python generate_website.py
+$ cd web
+$ python -m SimpleHTTPServer
+```
 ------
 
 - __src__ contains markdown and css files that are generated into HTML
