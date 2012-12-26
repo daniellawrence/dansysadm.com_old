@@ -1,7 +1,7 @@
 Recent updates
 -----------------
 
-### [total_a_tribute_to_awk.md](total_a_tribute_to_awk.html)
+### [Total. A tribute to awk](total_a_tribute_to_awk.html)
 *First published on 26 December, 2012*
 
 A new command to steal some of awk's power.
