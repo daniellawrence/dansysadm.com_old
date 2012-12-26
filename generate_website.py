@@ -12,6 +12,9 @@ import shutil
 import settings
 import re
 
+global sitemap_url_list 
+sitemap_url_list = []
+
 def generate_page(page_file, header_html, footer_html, root):
     """
     Take a markdown page name, a header, a footer and its location and
@@ -64,6 +67,22 @@ def generate_page(page_file, header_html, footer_html, root):
     # print some stats
     print "%(page_file)s generated %(page_size)d bytes" % locals()
 
+def add_to_sitemap( page_name, root):
+    """ add the current page to the sitemap file. """
+    global sitemap_url_list
+    website = "http://dansysadm.com"
+    page_name = page_name.replace('.md','.html')
+    loc = "%(website)s/%(root)s/%(page_name)s" % locals()
+
+
+    url = """<url>
+<loc>%(loc)s</loc>
+<lastmod>2012-12-26T07:27:41+00:00</lastmod>
+<changefreq>weekly</changefreq>
+</url>""" % locals()
+
+    sitemap_url_list.append( url )
+
 def main():
     """
     Read the headers and footers and generate all the pages in the input_dir.
@@ -81,11 +100,27 @@ def main():
     # copy all the static content to the output_dir,
     shutil.copytree('%(input_dir)s/static' % locals() ,'%(output_dir)s/static' % locals())
 
+    # copy the robots.txt into the outputdir
+    shutil.copy('%(input_dir)s/robots.txt' % locals() ,'%(output_dir)s/robots.txt' % locals())
+
     for (root, dir_name, files ) in os.walk(input_dir):
         for src_file in files:
             if not src_file.endswith('.md'):
                 continue
             generate_page( src_file, header_html, footer_html, root )
+            add_to_sitemap( src_file, root )
+
+
+    site_map_content = '<?xml version="1.0" encoding="utf-8"?>\n' + \
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + \
+    '\n'.join( sitemap_url_list ) + '\n</urlset>'
+    site_map_file = "%(output_dir)s/sitemap.xml" % locals()
+
+    f = open( site_map_file , 'w')
+    f.write( site_map_content )
+    f.close()
+
+            
         
 
 if __name__ == '__main__':
