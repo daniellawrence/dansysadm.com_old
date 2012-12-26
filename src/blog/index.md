@@ -1,10 +1,17 @@
 Recent updates
 -----------------
 
+
 ### [Total. A tribute to awk](total_a_tribute_to_awk.html)
 *First published on 26 December, 2012*
 
 A new command to steal some of awk's power.
+
+### [Server and host lists evolution](server_and_host_lists_evolution.md)
+*First published on 26 December, 2012*
+
+A review of host I have kept track of all my systems. From text files to an interactive database, hostinfo.
+
 
 ### [Converting my blog to static html files](speed_difference_converting_wordpress_to_static_html.html)
 *First published on 16 December, 2012*
