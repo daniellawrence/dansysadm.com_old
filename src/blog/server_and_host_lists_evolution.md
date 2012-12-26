@@ -10,7 +10,7 @@ In our heads
 
 The first place that I worked at was using the "In our heads" method of listing the servers. 
 There was only 2 so it was very easy to memorize. Then even had nice English names, so that made it even easier.
-The was no point at adding any more complexity to the listing system, as any new staff memory would simply be told that the 2 hosts are "bob" and "john" ( Not the read names).
+The was no point at adding any more complexity to the listing system, as any new staff memory would simply be told that the 2 hosts are "bob" and "john".
 
 The Excel spreadsheet v0.1
 --------------------------

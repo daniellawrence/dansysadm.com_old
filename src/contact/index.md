@@ -2,9 +2,9 @@
 
 I am a UNIX and Linux Systems administrator, Linux enthusiast and Python Programmer.
 
-I specializing with automation of Sun/Oracle Solaris and Red hat Linux tasks.
+I specialize in the automation of Sun/Oracle Solaris and Red hat Linux tasks.
 
-I am currently working on at Toll Group.
+Currently I am working at the Toll Group, in Melbourne, Australia.
 
 # contact
 
