@@ -11,6 +11,7 @@ import markdown2
 import shutil
 import settings
 import re
+import time
 
 global sitemap_url_list 
 sitemap_url_list = []
@@ -73,11 +74,12 @@ def add_to_sitemap( page_name, root):
     website = "http://dansysadm.com"
     page_name = page_name.replace('.md','.html')
     loc = "%(website)s/%(root)s/%(page_name)s" % locals()
+    current_time = time.strftime("%Y-%M-%D")
 
 
     url = """<url>
 <loc>%(loc)s</loc>
-<lastmod>2012-12-26T07:27:41+00:00</lastmod>
+<lastmod>%(current_time)s</lastmod>
 <changefreq>weekly</changefreq>
 </url>""" % locals()
 
@@ -111,11 +113,14 @@ def main():
             add_to_sitemap( src_file, root )
 
 
+
+    # Extra header information to make sitemaps into sitemap.xml
     site_map_content = '<?xml version="1.0" encoding="utf-8"?>\n' + \
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + \
     '\n'.join( sitemap_url_list ) + '\n</urlset>'
     site_map_file = "%(output_dir)s/sitemap.xml" % locals()
 
+    # Save the generated site_map_content into site_map_file
     f = open( site_map_file , 'w')
     f.write( site_map_content )
     f.close()
