@@ -1,6 +1,11 @@
 Recent updates
 -----------------
 
+### [total_a_tribute_to_awk.md](total_a_tribute_to_awk.html)
+*First published on 26 December, 2012*
+
+A new command to steal some of awk's power.
+
 ### [Converting my blog to static html files](speed_difference_converting_wordpress_to_static_html.html)
 *First published on 16 December, 2012*
 
