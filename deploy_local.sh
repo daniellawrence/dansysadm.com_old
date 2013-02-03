@@ -18,6 +18,3 @@ rm -rf "web"
 
 # create a new static site
 ./generate_website.py
-
-# Update the site
-rsync -azv web/* 192.168.122.54:/var/www/dansysadm/
