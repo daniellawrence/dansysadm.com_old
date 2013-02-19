@@ -1,7 +1,7 @@
 Recent updates
 -----------------
 
-### My git setup(my_git_setup.html)
+### [My git setup](my_git_setup.html)
 *First published on 18 February, 2013*
 
 This is a quick overview on how I have setup my git on one of my servers.
