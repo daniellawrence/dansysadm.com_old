@@ -1,6 +1,12 @@
 Recent updates
 -----------------
 
+### My git setup(my_git_setup.html)
+*First published on 18 February, 2013*
+
+This is a quick overview on how I have setup my git on one of my servers.
+Single command to create a brand new git repo.
+
 
 ### [Total. A tribute to awk](total_a_tribute_to_awk.html)
 *First published on 26 December, 2012*
