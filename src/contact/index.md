@@ -10,15 +10,15 @@ Currently I am working at the Toll Group, in Melbourne, Australia.
 
 __Email__
 
-You can email me directly [daniel@danielscottlawrence.com](mailto://daniel@danielscottlawrence.com/ "Email me!") to get in touch.
+You can email me directly [dannyla@linux.com](mailto://dannyla@dlinux.com/ "Email me!") to get in touch.
 
 __Phone__
 
-Send me and email and I will provide my personal phone number for a chat [daniel@danielscottlawrence.com](mailto://daniel@danielscottlawrence.com/ "Email me!") 
+Send me and email and I will provide my personal phone number for a chat [dannyla@linux.com](mailto://dannyla@linux.com/ "Email me!") 
 
 __Curriculum vitae__
 
-Send me and email requesting my CV and i will be able to provide you with the most up-to-date version [daniel@danielscottlawrence.com](mailto://daniel@danielscottlawrence.com/ "Email me!") 
+Send me and email requesting my CV and i will be able to provide you with the most up-to-date version [dannyla@linux.com](mailto://dannyla@linux.com/ "Email me!") 
 
 __Linkedin (Me)__
 
