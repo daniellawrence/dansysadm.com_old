@@ -23,32 +23,32 @@ $ sudo pip install graphitesend
 
 You can also install from the source from [github.com](https://github.com/daniellawrence/graphitesend).
 
-````sh
+```sh
 $ git clone https://github.com/daniellawrence/graphitesend
 $ cd graphitesend
 $ sudo python ./setup.py install
-````
+```
 
 Gather the data
 -----------------
 
 Before you can send the data to graphite, you need to be able to gather the data in the first place.
+Open up the /proc/loadavg file and grab the first 3 columns. 
 
-````python
-# Open up the /proc/loadavg file and grab the first 3 columns. 
+```python
 >>> (la1, la5, la15 ) = open('/proc/loadavg').read().strip().split()[:3]
 >>> print la1, la5, la15
 0.35 0.34 0.30
-````
+```
 
 Now we have 3 variables that contain the loadavg data for 1,5 and 15 minute avg.
 
 Sending the data to graphite
 -----------------------------
 
-In this example we are going to assume that your graphite server is called 'graphite' and its listening on port '2003'.
+In this example we are going to assume that your graphite server is called **graphite** and its listening on port **2003**.
 
-````python
+```python
 >>> import graphitesend
 >>> g = graphitesend.init(group='loadavg_')
 'sent 51 long message: systems.<hostname>.loadavg_1min 0.470000 1365154443\n '
@@ -58,11 +58,20 @@ In this example we are going to assume that your graphite server is called 'grap
 'sent 52 long message: systems.<hostname>.loadavg_15min 0.280000 1365154474\n '
 ```
 
-To throw this into a while loop, like the example from the graphite project.
+If your graphite instance is not called **graphite** or maybe not listening on port **2003**. 
+Then you can just change it in the init().
 
-We are also using the suffix keyword arg in the init() function to suffix all the metric names with 'min'
+```python
+>>> graphitesend.init(graphite_server='graphite.prod.example.com', graphite_port=1234)
+```
 
-````python
+Now throw loadavg. gather into a while loop, like the example from the graphite project.
+
+We are also using the suffix keyword arg in the init() function to suffix all the metric names with 'min'.
+
+The **send_dict()** lets us send a dict of data points as long as they are simple key,value pairs.
+
+```python
 #!/usr/bin/env python
 import time
 import graphitesend
@@ -76,9 +85,11 @@ while True:
 
 This will send 3 metrics to graphite with the following names.
 
+```sh
 systems.<hostname>.loadavg_1min
 systems.<hostname>.loadavg_15min
 systems.<hostname>.loadavg_5min
+```
 
 
 
@@ -96,8 +107,11 @@ IpExt: 2 0 123 125 172 12 315907582 12881887 62007 60884 44576 548
 ```
 
 Graph the data then sent it to graphite
+----------------------------------------
 
-````python
+To turn the above mess into a graphite data, its going to take 9 lines of code!
+
+```python
 #!/usr/bin/env python
 
 import graphitesend
@@ -115,11 +129,11 @@ data_list = zip( tcp_metrics + ip_metrics, tcp_values + ip_values )
 
 g = graphitesend.init(group='netstat.')
 g.send_list( data_list )
-````
+```
 
 The above script generates metrics over to graphite that look like this.
 
-````sh
+```sh
 systems.<hostname>.netstat.InBcastPkts 211.000000 1365156828
 systems.<hostname>.netstat.OutBcastPkts 12.000000 1365156828
 systems.<hostname>.netstat.InOctets 329841457.000000 1365156828
@@ -131,9 +145,9 @@ systems.<hostname>.netstat.InBcastOctets 55275.000000 1365156828
 
 If you did not like the fact that is mixed case, then you can just throw this in the init() function
 
-````python
+```python
 g = graphitesend.init(lowercase_metric_names=True)
-````
+```
 
 conclusion
 ----------
