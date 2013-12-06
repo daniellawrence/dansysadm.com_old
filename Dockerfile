@@ -10,3 +10,5 @@ RUN apt-get update  -qq
 RUN apt-get install nginx supervisor -y
 ADD ./web /usr/share/nginx/html
 ADD ./supervisor-nginx.conf /etc/supervisor/conf.d/nginx.conf
+
+ENTRYPOINT ['/usr/bin/supervisord', '-n']
