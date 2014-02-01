@@ -2,13 +2,22 @@ FROM ubuntu:12.04
 MAINTAINER Danny Lawrence <dannyla@linux.com>
 
 # Add nginx packages
-RUN echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu precise main" > /etc/apt/sources.list.d/nginx-stable-precise.list
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C
 
+RUN apt-get install python-software-properties -y
+RUN add-apt-repository -y ppa:nginx/stable 
 RUN echo "deb http://au.archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 RUN apt-get update  -qq
-RUN apt-get install nginx supervisor -y
-ADD ./web /usr/share/nginx/html
+RUN apt-get install supervisor python-pip python -y
+RUN apt-get install nginx  -y
+
+ADD requirements.txt /tmp/
+RUN pip install -r /tmp/requirements.txt
+
+ADD . /tmp/build
+RUN cd /tmp/build && python /tmp/build/generate_website.py
+RUN cp -rp /tmp/build/web/* /usr/share/nginx/html/
 ADD ./supervisor-nginx.conf /etc/supervisor/conf.d/nginx.conf
 
-ENTRYPOINT ['/usr/bin/supervisord', '-n']
+EXPOSE 80
+
+CMD /usr/bin/supervisord -n
